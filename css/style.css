@@ -88,6 +88,7 @@ nav{
 }
 .latest{
 display: flex;
+flex-direction: row;
 margin-top:32px ;
 }
 .latest section{
@@ -116,11 +117,14 @@ margin-top:32px ;
     margin: 0 20px;
 }
 .readmore{
+     justify-content: center;
      background: rgb(141, 153, 38);
      font-size: 18px;
-     padding: 8px 15px;
+     padding: 15px;
      border:none;
      border-radius: 5px;
+    
+     
 }
 
 h3{
@@ -164,12 +168,82 @@ input{
     padding: 10px;
     border:rgb(17, 19, 143) solid 3px;
 
-
 }
 [type='submit']{
     background:salmon;
     color:seashell
 }
+
+.ham,.time{
+    display: none;
+
+}
+
+/* media query */
+
+/* min-width or max-width */
+@media(max-width:760px){
+    .nav{
+        padding: 22px;
+
+    }
+.ham{
+    display:block;
+}
+
+
+.menu{
+    display: none;
+}
+.rec-card{
+    display: flex;
+    flex-direction: column;
+}
+}
+
+@media(max-width: 1086px){
+    .latest{
+        display: flex;
+        flex-direction: column;
+        margin: 32px;
+    }
+    .latest section{
+        width:100%;
+    }
+    .latest aside{
+        width: 100%;
+    }
+    aside{
+        margin-top: 32px;
+    }
+
+}
+@media (max-width:576px) {
+    .ham{
+        display: block;
+    }
+    .post-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .post-content img{
+        width: 100%;
+        height: auto;
+        margin-bottom:32px ;
+    }
+   
+}
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
